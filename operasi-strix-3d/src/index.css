@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1c202c;
+    color: #e8ecf5;
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+/* Dark Neumorphic helpers */
+.neu-card {
+  background: #232939;
+  box-shadow: 6px 6px 14px #11141c, -6px -6px 14px #2f3750;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.neu-card-sm {
+  background: #232939;
+  box-shadow: 4px 4px 10px #11141c, -4px -4px 10px #2f3750;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.neu-sunk {
+  background: #1a1e29;
+  box-shadow: inset 4px 4px 9px #11141c, inset -3px -3px 8px #2f3750;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.neu-btn {
+  background: #232939;
+  box-shadow: 4px 4px 10px #11141c, -4px -4px 10px #2f3750;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.18s ease;
+}
+
+.neu-btn:hover:not(:disabled) {
+  background: #282f42;
+  border-color: rgba(139, 124, 246, 0.35);
+}
+
+.neu-btn:active:not(:disabled),
+.neu-btn-active {
+  background: #1d2230;
+  box-shadow: inset 3px 3px 8px #11141c, inset -3px -3px 7px #2f3750;
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1e29;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2f3750;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8b7cf6;
+}
